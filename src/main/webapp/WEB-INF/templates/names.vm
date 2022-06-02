@@ -1,0 +1,12 @@
+<html>
+<body>
+#set($value = 12)
+    #parse("header.vm")
+    <h1>Lista imion</h1>
+    #foreach($name in $names)
+        #if($foreach.count % 2 == 0)
+            <h3>$name</h3>
+        #end
+    #end
+</body>
+</html>
