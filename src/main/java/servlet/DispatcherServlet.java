@@ -19,5 +19,6 @@ public class DispatcherServlet extends HttpServlet {
         String valueOfParameterName = req.getParameter("name");
         req.setAttribute("name", valueOfParameterName);
         req.getRequestDispatcher("/hello.jsp").forward(req, resp);
+        //req.getRequestDispatcher("/hello.jsp").include(req, resp);
     }
 }

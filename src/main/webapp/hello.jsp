@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="java.util.Optional" %><%--
   Created by IntelliJ IDEA.
   User: cs
   Date: 02.06.2022
@@ -12,5 +13,11 @@
 </head>
 <body>
     <h2>Hello ${name} from DispatcherServlet</h2>
+    <p>
+    <%
+        final Enumeration<String> en = request.getParameterNames();
+        out.println(Optional.ofNullable(request.getAttribute("name")).orElse(""));
+    %>
+    </p>
 </body>
 </html>
